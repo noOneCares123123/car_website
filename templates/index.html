@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<h1>Car Blog</h1>
+
+<a href="/add">Add Car</a>
+
+<div class="container">
+
+{% for car in cars %}
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='images/' + car.image) }}">
+
+<h2>{{ car.name }}</h2>
+
+<p>{{ car.description[:120] }}...</p>
+
+<a href="/car/{{ car.id }}">Read More</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

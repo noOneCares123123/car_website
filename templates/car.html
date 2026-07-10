@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<a href="/">← Home</a>
+
+<h1>{{ car.name }}</h1>
+
+<img src="{{ url_for('static', filename='images/' + car.image) }}">
+
+<h2>Specifications</h2>
+
+<ul>
+
+<li>Brand: {{ car.brand }}</li>
+
+<li>Year: {{ car.year }}</li>
+
+<li>Horsepower: {{ car.horsepower }} HP</li>
+
+<li>Engine: {{ car.engine }}</li>
+
+<li>Top Speed: {{ car.topspeed }} km/h</li>
+
+</ul>
+
+<p>{{ car.description }}</p>
+
+</body>
+</html>
